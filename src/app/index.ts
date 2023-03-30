@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "./assets")));
 
 const videoHLS = () => {
     try {
-        ffmpeg(path.join(__dirname, "./assets/test.mp4"))
+        ffmpeg(path.join(__dirname, "./assets/test2.mp4"))
             .videoCodec("libx264")
             .format("hls") // 输出视频格式
             .outputOptions("-hls_list_size 0") //  -hls_list_size n:设置播放列表保存的最多条目，设置为0会保存有所片信息，默认值为5
@@ -43,7 +43,7 @@ const videoHLS = () => {
     }
 };
 
-// videoHLS();
+videoHLS();
 
 app.listen("4000", () => {
     console.log("api listen on 4000");
