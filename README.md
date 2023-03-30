@@ -11,6 +11,12 @@ npm run serve
 
 ### 切片方法
 ```ts
+import path from "path";
+import ffmpegPath from "@ffmpeg-installer/ffmpeg";
+import ffmpeg from "fluent-ffmpeg";
+
+ffmpeg.setFfmpegPath(ffmpegPath.path);
+
 const videoHLS = () => {
     try {
         ffmpeg(path.join(__dirname, "./assets/test.mp4"))
