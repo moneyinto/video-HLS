@@ -9,6 +9,8 @@ npm run dev
 npm run serve
 ```
 
+### 通过视频切片HLS，来处理google不支持非H264格式视频播放的问题
+
 ### 切片方法
 ```ts
 import path from "path";
